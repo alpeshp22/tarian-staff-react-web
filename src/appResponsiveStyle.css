@@ -1,0 +1,58 @@
+/*--START 575PX --*/
+@media (max-width: 575px) {
+    .loginPage {
+        height: auto;
+        min-height: 100vh;
+        padding: 0 20px;
+    }
+
+    .loginForm .logo {
+        margin-bottom: 20px;
+    }
+
+    .loginForm {
+        width: 100%;
+    }
+
+    .frgotPassPage .loginForm .msgTxt {
+        max-width: 270px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .loginForm .frgot-pass {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+}
+
+/*--END 575PX--*/
+
+/*--START 420PX--*/
+@media (max-width: 420px) {
+    .loginForm {
+        padding: 30px 18px;
+    }
+
+    .loginPage {
+        padding: 0 15px;
+    }
+
+    .loginForm .frmTitle {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .loginForm .form-floating>label {
+        font-size: 16px;
+    }
+
+    .loginForm .form-control {
+        font-size: 16px;
+    }
+
+
+}
+
+/*--END 420PX--*/

@@ -1,0 +1,1665 @@
+:root {
+    --theme-color: #289EA8;
+    --theme-color2: #4f898d;
+    --orange: #fe8b4a;
+    --black22: #222222;
+    --placeholder: #909090;
+    --redDC: #dc2625;
+    --gray80: #808080;
+}
+
+/*----------Start Customize Style----------*/
+.text-green {
+    color: var(--theme-color) !important;
+}
+
+.text-orange {
+    color: var(--orange) !important;
+}
+
+.bg-green {
+    background-color: var(--theme-color) !important;
+}
+
+.bg-orange {
+    background-color: var(--orange) !important;
+}
+
+
+.form-control::placeholder {
+    color: var(--placeholder) !important;
+}
+
+.form-control:focus,
+.form-select:focus,
+.btn:hover,
+.btn:focus,
+.btn:active {
+    box-shadow: none;
+    outline: initial;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #ced4da;
+}
+
+span.error {
+    color: var(--redDC);
+    font-size: 12px;
+}
+
+label.error {
+    color: var(--redDC);
+    font-size: 12px;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 10px solid #f3f3f3;
+    border-top-color: var(--theme-color);
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+}
+
+.spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn-orange {
+    color: #fff;
+    border-color: var(--orange);
+    background-color: var(--orange);
+    border-radius: 5px;
+}
+
+.btn-orange:hover {
+    color: var(--orange);
+    background-color: transparent;
+}
+
+.btn-red {
+    color: #fff;
+    border-color: var(--redDC);
+    background-color: var(--redDC);
+    border-radius: 5px;
+}
+
+.btn-red:hover {
+    color: var(--redDC);
+    background-color: transparent;
+}
+
+.btn-green {
+    background-color: var(--theme-color);
+    color: #fff;
+    border-color: var(--theme-color);
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.btn-green:hover,
+.btn-green:focus,
+.btn-green:active {
+    color: var(--theme-color);
+    border-color: var(--theme-color);
+    background-color: transparent;
+}
+
+table tr {
+    padding: 5px 0;
+    vertical-align: middle;
+}
+
+table tr td {
+    white-space: normal;
+    word-wrap: break-word;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.themeCheckBox {
+    width: 25px;
+    height: 25px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.themeCheckBox:checked[type=checkbox] {
+    position: relative;
+    background-image: none;
+
+}
+
+.themeCheckBox:checked[type=checkbox]:before {
+    content: "\f26e";
+    font-family: bootstrap-icons !important;
+    font-size: 36px;
+    position: absolute;
+    top: -2px;
+    right: -7px;
+    line-height: 25px;
+}
+
+.themeCheckBox:checked {
+    background-color: #fff;
+    border-color: rgba(0, 0, 0, .25);
+}
+
+/*----------End Customize Style----------*/
+
+/*----------Start Login Pages----------*/
+.loginPage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/login_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm {
+    position: relative;
+    width: 500px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.loginForm .logo {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.loginForm .logo img {
+    max-width: 150px;
+}
+
+.loginForm .frmTitle {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.loginForm .formGroup {
+    margin-bottom: 15px;
+}
+
+.loginForm .form-floating>label {
+    font-size: 18px;
+    color: var(--placeholder);
+    padding-left: 0;
+}
+
+.loginForm .form-floating>.form-control:focus~label,
+.loginForm .form-floating>.form-control:not(:placeholder-shown)~label,
+.loginForm .form-floating>.form-select~label {
+    font-weight: 700;
+    color: var(--theme-color);
+    opacity: .65;
+    transform: scale(.85) translateY(-1rem) translateX(0rem);
+}
+
+.loginForm .form-control {
+    color: #000;
+    font-size: 18px;
+    border: 0;
+    border-bottom: 1px solid var(--black22);
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.loginForm .form-floating>.form-control:focus,
+.loginForm .form-floating>.form-control:not(:placeholder-shown) {
+    border-bottom-color: var(--theme-color);
+}
+
+.loginForm .btnView {
+    margin: 30px 0;
+}
+
+.loginForm .btnView .btn {
+    width: 100%;
+}
+
+.loginForm .frgot-pass {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.loginForm .frgot-pass a {
+    font-size: 16px;
+    color: var(--black22);
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+input:-internal-autofill-selected {
+    background-color: transparent !important;
+}
+
+/*----------End Login Pages----------*/
+
+/*----------Start Forgot Password Page ----------*/
+.frgotPassPage .loginForm .frmTitle {
+    margin-bottom: 20px;
+}
+
+.frgotPassPage .loginForm .msgTxt {
+    max-width: 300px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    font-size: 16px;
+    color: var(--black22);
+    font-weight: 500;
+}
+
+.frgotPassPage .loginForm .frgot-pass i {
+    font-size: 10px;
+    transform: translateY(-2px);
+    display: inline-block;
+}
+
+/*---------- End Forgot Password Page ----------*/
+
+
+/*---------- Start Sidebar ----------*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    background-image: url(../../resources/sidebar_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow-y: auto;
+    z-index: 1025;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 12px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background-color: #25919a;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 3px solid #248f98;
+    border-radius: 20px;
+}
+
+.sidebar .logoView {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 150;
+    background-color: #248f98;
+}
+
+.sidebar .logoView .logo {
+    max-width: 100px;
+}
+
+.sidebar .logoView .btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 40px;
+    height: 30px;
+    padding: 0;
+    color: #fff;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.sidebar .logoView .btn:hover {
+    color: var(--theme-color);
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.sidebar .userInfo {
+    padding: 15px;
+    padding-left: 40px;
+}
+
+.sidebar .userInfo p {
+    font-size: 16px;
+    position: relative;
+    color: #fff;
+    margin-bottom: 5px;
+    /* padding-left: 53px; */
+}
+
+.sidebar .userInfo p span {
+    text-transform: uppercase;
+    /* position: absolute;
+    left: 0; */
+}
+
+.sidebar .userInfo .btn {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.sidebar .userInfo .btn i {
+    margin-right: 5px;
+    font-size: 80%;
+}
+
+.sidebar .userInfo .btn:hover {
+    background-color: var(--black22);
+    border-color: var(--black22);
+}
+
+.sidebar .menuList {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.sidebar .menuList .menuLink {
+    position: relative;
+    padding: 10px 15px;
+    padding-left: 42px;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    transition: background-color .15s;
+}
+
+.sidebar .menuList .menuLink i {
+    position: absolute;
+    left: 15px;
+    text-align: left;
+}
+
+.sidebar .menuList .menuLink:hover,
+.sidebar .menuList .menuLink.active {
+    background-color: #1fb1bc;
+}
+
+.sidebar .pharmacistMenu {
+    position: relative;
+    padding: 15px;
+}
+
+.sidebar .pharmacistMenu p {
+    color: #fff;
+}
+
+.sidebar .pharmacistMenu .menuList .menuLink {
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.sidebar .pharmacistMenu .menuList .menuLink:hover,
+.sidebar .pharmacistMenu .menuList .menuLink:active {
+    background-color: var(--black22);
+}
+
+.sidebar .pharmacistMenu .menuList li:first-child .menuLink {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.sidebar .pharmacistMenu .menuList li:last-child .menuLink {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/*---------- End Sidebar ----------*/
+
+
+/*---------- Start Header ----------*/
+.topHeader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 280px);
+    padding: 15px 0;
+    /* padding-left: 280px; */
+    background-color: #fff;
+    box-shadow: 5px 0 8px rgb(0 0 0 / 30%);
+    z-index: 1024;
+}
+
+.topHeader .nav {
+    justify-content: flex-end;
+}
+
+.topHeader .nav .back-item {
+    margin-right: auto;
+}
+
+.topHeader .nav .nav-link {
+    font-size: 16px;
+    color: var(--black22);
+    font-weight: 500;
+}
+
+/*---------- Start Header ----------*/
+
+.pageContent {
+    position: relative;
+    padding-top: 70px;
+    padding-left: 280px;
+}
+
+.pageContent .container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.BreadCrumb {
+    padding: 20px 0;
+}
+
+.BreadCrumb .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.BreadCrumb .link,
+.BreadCrumb span {
+    position: relative;
+    font-size: 16px;
+    color: var(--black22);
+    font-weight: 500;
+    display: inline-block;
+}
+
+.BreadCrumb .link {
+    color: var(--theme-color);
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.BreadCrumb .link:after {
+    content: "\f285";
+    font-family: bootstrap-icons !important;
+    position: absolute;
+    font-size: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -16px;
+}
+
+.themeCard {
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+    margin-bottom: 30px;
+}
+
+.themeCard .card-header {
+    background-color: var(--theme-color);
+    color: #fff;
+    border-color: var(--theme-color);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.themeCard .card-header.bg-white {
+    color: var(--black22);
+    border-color: rgba(0, 0, 0, .125);
+}
+
+.themeCard .card-header h5 {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.themeCard .card-body p {
+    font-size: 16px;
+    color: var(--black22);
+    font-weight: 500;
+}
+
+.themeCard .btnView {
+    margin-top: 20px;
+}
+
+
+.themeCard .btnView .btn:first-child {
+    margin-right: 20px;
+}
+
+.health-score-card .card-body {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.map-card iframe {
+    width: 100%;
+    min-height: 202px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.overviewPage .themeCard {
+    flex: 1;
+    min-height: 257.5px;
+}
+
+.overviewPage .Row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.overviewPage .card.w-500 {
+    max-width: 540px;
+    margin-right: 30px;
+}
+
+.overviewPage .card.w-400 {
+    max-width: 400px;
+}
+
+.overviewPage .card.w-800 {
+    max-width: 800px;
+}
+
+
+.pInfoRow {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.pInfoRow label {
+    font-size: 16px;
+    color: var(--black22);
+    font-weight: 500;
+    width: 210px;
+}
+
+.pInfoRow p {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.themeTabs {
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+}
+
+.themeTabs .nav {
+    box-shadow: 0 5px 5px rgb(0 0 0 / 8%);
+}
+
+.themeTabs .nav .nav-link {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--gray80);
+    border-radius: 0;
+    padding: 12px 30px;
+    border-bottom: 3px solid transparent;
+}
+
+.themeTabs .nav .nav-link.active {
+    color: var(--black22);
+    background-color: transparent;
+    border-color: var(--theme-color);
+}
+
+.themeTabs .tab-content {
+    position: relative;
+    padding: 1rem 1rem;
+}
+
+.pInfoRow .inputView {
+    position: relative;
+    max-width: 450px;
+    flex: 1;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.pInfoRow .inputView input,
+.pInfoRow .inputView select {
+    padding: 0.175rem 0.75rem;
+}
+
+.pSearchPage .card-body .btn-green {
+    min-width: 150px;
+}
+
+
+.Progress-bar {
+    position: relative;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.barOverflow {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 100px;
+    margin-bottom: -14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 10px solid #ccc;
+    border-bottom-color: var(--redDC);
+    border-right-color: var(--redDC);
+}
+
+
+.Progress-bar h6 {
+    font-size: 17px;
+    color: #fff;
+    opacity: 0.8;
+    margin-bottom: 18px;
+}
+
+.Progress-bar h5 {
+    font-size: 19px;
+    color: #fff;
+}
+
+.Progress-bar h4 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.themeTable.w-600 {
+    max-width: 600px;
+}
+
+.themeTable th,
+.themeTable td {
+    vertical-align: middle;
+}
+
+.themeTable tbody p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black22);
+    margin-bottom: 0;
+}
+
+.themeTable tbody p span {
+    display: block;
+    opacity: 0.6;
+    font-size: 85%;
+}
+
+.pharmaciesCard iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.pharmaciesCard .contentCol .row {
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 0 auto;
+    border-bottom: 2px solid lightgray;
+}
+
+.pharmaciesCard .contentCol .row:last-child {
+    border-bottom: 0;
+}
+
+.pharmaciesCard .contentCol h5 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.pharmaciesCard .contentCol p:last-child {
+    margin-bottom: 0;
+}
+
+.pharmaciesCard .contentCol .iconTxt {
+    position: relative;
+    font-size: 16px;
+    padding-left: 25px;
+    text-align: left;
+}
+
+.pharmaciesCard .contentCol .iconTxt i {
+    position: absolute;
+    left: 0;
+}
+
+.pharmaciesCard .contentCol .distanceTxt {
+    text-align: center;
+}
+
+.pharmaciesCard .contentCol .distanceTxt span {
+    display: block;
+}
+
+.pharmaciesCard .contentCol .distanceTxt i {
+    position: relative;
+    color: var(--redDC);
+    font-size: 22px;
+    display: table;
+    margin: auto;
+}
+
+.pharmaciesCard .contentCol .distanceTxt i span {
+    font-size: 50%;
+    color: #fff;
+    background-color: var(--redDC);
+    width: 100%;
+    position: absolute;
+    left: 3.5px;
+    top: 5px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.msgsRow {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 500px;
+}
+
+.msgsRow .msgsColLeft {
+    width: 415px;
+    min-height: 100%;
+    box-shadow: 5px 0 5px rgb(0 0 0 / 6%);
+
+}
+
+.msgsRow .msgsColRight {
+    flex: 1;
+    padding: 15px;
+}
+
+.msgsRow .msgsRowNav {
+    box-shadow: none;
+    width: 100%;
+    padding: 15px;
+}
+
+.msgsRow .msgsRowNav li {
+    flex: 1;
+}
+
+.msgsRow .msgsRowNav .nav-link {
+    position: relative;
+    font-size: 16px;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.msgList .nav-item {
+    width: 100%;
+}
+
+.msgList .nav-link {
+    position: relative;
+    padding: 10px 40px !important;
+    text-align: left;
+    width: 100%;
+    color: var(--black22) !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 0 !important;
+    line-height: 22px;
+    margin-top: 15px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+}
+
+.msgList .nav-link.active {
+    color: #fff !important;
+    background-color: var(--theme-color) !important;
+}
+
+.msgList .nav-link:before {
+    content: "\f32c";
+    font-family: bootstrap-icons !important;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.msgList .nav-link.active:before {
+    content: "\f32d";
+}
+
+.msgList .nav-link:after {
+    content: "\f138";
+    font-family: bootstrap-icons !important;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.msgList .nav-link span {
+    display: block;
+    font-size: 90%;
+    opacity: 0.8;
+}
+
+.msgHeader {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 5px;
+    margin-bottom: 40px;
+}
+
+.msgHeader .msgHeaderLeft {
+    position: relative;
+    flex: 1;
+}
+
+.msgHeader p {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.msgHeader .msgHeaderLeft p {
+    padding-left: 85px;
+}
+
+.msgHeader p span {
+    position: absolute;
+    left: 0;
+}
+
+.msgBody p {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.msgBody .respectly {
+    margin-bottom: 30px;
+}
+
+.msgBody .regards {
+    margin-top: 30px;
+}
+
+.cnMsgCard .inputRow {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom: 8px;
+    max-width: 600px;
+}
+
+.cnMsgCard .inputRow label {
+    width: 90px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cnMsgCard .inputRow .form-control {
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cnMsgCard .inputRow .form-control.msgTo {
+    color: var(--theme-color);
+    caret-color: var(--theme-color);
+}
+
+.cnMsgCard textarea {
+    border-radius: 0;
+    resize: none;
+    min-height: 350px;
+    margin-top: 20px;
+    border: 0;
+    border-bottom: 1px solid #d6d6d6;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cnMsgCard .cnmHeader {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+}
+
+.cnMsgCard .btnView {
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.cnMsgCard .btnView .btn {
+    margin-right: 0 !important;
+    font-size: 18px;
+    padding: 10px 30px;
+}
+
+.cnMsgCard .btnView .btn i {
+    margin-right: 8px;
+}
+
+.contactPrefPage .inputView .form-control {
+    padding-right: 48px;
+}
+
+.contactPrefPage .inputView .btn {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.contactPrefPage .col-lg-6:nth-child(2) .pInfoRow label {
+    width: 260px;
+}
+
+.contactPrefPage .col-lg-6:nth-child(2) .pInfoRow .form-check-input {
+    width: 25px;
+    height: 25px;
+    /* border-color: transparent; */
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+
+.form-check-input:focus {
+    border-color: rgba(0, 0, 0, .25);
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.form-check-input:active {
+    background-color: transparent;
+}
+
+.contactPrefPage .form-check-input:checked[type=checkbox] {
+    position: relative;
+    background-image: none;
+
+}
+
+.contactPrefPage .form-check-input:checked[type=checkbox]:before {
+    content: "\f26e";
+    font-family: bootstrap-icons !important;
+    font-size: 34px;
+    position: absolute;
+    top: -1px;
+    right: -6px;
+    line-height: 25px;
+    width: auto;
+}
+
+.contactPrefPage .form-check-input:checked {
+    background-color: #fff;
+    border-color: rgba(0, 0, 0, .25);
+}
+
+.appoListCard .nav {
+    box-shadow: none;
+    padding: 0 0.5rem;
+    margin-top: 10px;
+}
+
+.appoListCard .nav .nav-link {
+    font-size: 17px;
+    padding: 10px;
+}
+
+.appoListCard .themeTabs,
+.appoListCard table {
+    box-shadow: none;
+    margin-bottom: 0;
+}
+
+.appoListCard .tab-content {
+    margin-top: 15px;
+}
+
+.appoListCard table tr {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+    vertical-align: middle;
+}
+
+.appoListCard table tr td {
+    white-space: normal;
+    word-wrap: break-word;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.appoListCard table tbody tr th {
+    color: var(--gray80);
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.events-timeline {
+    position: relative;
+    width: calc(100% - 350px);
+    margin-left: auto;
+    padding: 10px 50px;
+    padding-right: 0;
+    list-style: none;
+    border-left: 3px solid var(--theme-color);
+}
+
+.events-timeline::before,
+.events-timeline::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border: 2px solid var(--theme-color);
+    border-radius: 50%;
+}
+
+.events-timeline::before {
+    top: 0;
+}
+
+.events-timeline::after {
+    bottom: 0;
+}
+
+.events-timeline li {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.events-timeline li:last-child {
+    margin-bottom: 0;
+}
+
+.events-timeline li .date {
+    /* width: 250px; */
+    position: absolute;
+    top: 35px;
+    left: -275px;
+    text-align: right;
+}
+
+.events-timeline li .date h5 {
+    font-size: 18px;
+    color: var(--black22);
+    margin-bottom: 0;
+}
+
+.events-timeline li .date span {
+    display: block;
+    font-size: 17px;
+    color: var(--gray80);
+    font-weight: 700;
+}
+
+.events-timeline .info {
+    position: relative;
+    padding: 20px;
+    padding-left: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    max-width: 550px;
+}
+
+.events-timeline .info:before {
+    content: "\f22d";
+    font-family: bootstrap-icons !important;
+    position: absolute;
+    left: -20px;
+    top: 22px;
+    color: #fff;
+    text-shadow: 0 3px 2px rgba(0, 0, 0, 0.1), 0 -3px 2px rgba(0, 0, 0, 0.1);
+    font-size: 29px;
+}
+
+.events-timeline .info p {
+    font-size: 17px;
+}
+
+.events-timeline .info .btns {
+    text-align: right;
+    margin-top: 2rem;
+}
+
+.events-timeline .info .btns .btn:first-child {
+    margin-right: 10px;
+}
+
+.events-timeline .info::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: -62px;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border: 2px solid var(--theme-color);
+    border-radius: 50%;
+}
+
+.events-timeline li.skip-year {
+    margin-bottom: 20px;
+    position: relative;
+    height: 40px;
+}
+
+.events-timeline li.skip-year p {
+    display: inline-block;
+    background-color: var(--theme-color);
+    color: #fff;
+    padding: 2px 15px;
+    border-radius: 10px;
+    position: absolute;
+    left: -85px;
+    top: 0;
+}
+
+.createAppoPage .pInfoRow {
+    margin-bottom: 2rem;
+}
+
+.createAppoPage .slotsView {
+    position: relative;
+    flex: 1;
+    max-width: 460px;
+}
+
+.slotsView .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slotsView .btn-group .btn {
+    flex: inherit;
+    width: auto;
+    color: var(--black22);
+    background-color: #fff;
+    margin: 0 12px 15px 0;
+    font-weight: 500;
+    border-radius: 5px !important;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    z-index: auto;
+}
+
+.slotsView .btn-check:active+.btn,
+.slotsView .btn-check:checked+.btn,
+.slotsView .btn.active,
+.slotsView .btn.dropdown-toggle.show,
+.slotsView .btn:active {
+    color: #fff;
+    background-color: var(--theme-color);
+    border-color: var(--theme-color);
+    z-index: auto;
+}
+
+.pInfoRow .dateInput {
+    border-radius: 5px;
+}
+
+.dateInput .react-datepicker__input-container input {
+    width: 100%;
+    position: relative;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding-right: 32px;
+    outline: none;
+}
+
+.dateInput .react-datepicker__input-container::after {
+    content: "\f1f2";
+    font-family: bootstrap-icons !important;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    z-index: 50;
+}
+
+.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::after {
+    border-bottom-color: var(--theme-color);
+}
+
+.react-datepicker__header {
+    background-color: var(--theme-color);
+    border-color: var(--theme-color);
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+    color: #fff;
+}
+
+.react-datepicker__navigation {
+    top: 10px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.react-datepicker__navigation-icon::before {
+    border-color: #fff;
+    opacity: 0.5;
+}
+
+.react-datepicker__navigation:hover *::before {
+    border-color: #fff;
+    opacity: 1;
+}
+
+.react-datepicker__day:hover {
+    border-radius: 50%;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--selected:hover {
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--theme-color);
+    border: 1px solid #767676;
+}
+
+.react-datepicker__day--today,
+.react-datepicker__day--today:hover {
+    background-color: var(--theme-color);
+    border-radius: 50%;
+    color: #fff;
+}
+
+.prescriptionsPage .themeTabs {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.prescriptionsPage .themeTabs .nav {
+    padding: 0 0.5rem;
+    box-shadow: none;
+}
+
+.prescriptionsPage .themeCard .card-body p {
+    margin-bottom: 5px;
+}
+
+.prescriptionsPage .themeCard .card-body p span {
+    font-weight: bold;
+}
+
+.prescriptionsListTable {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+}
+
+.prescriptionsListTable .border-right {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.prescriptionsListTable td.w20 {
+    width: 20%;
+}
+
+.prescriptionsListTable td.w80 {
+    width: 80px;
+    text-align: center;
+}
+
+.prescriptionsListTable h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--black22);
+    margin-bottom: 3px;
+}
+
+.prescriptionsListTable h6 {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--gray80);
+    line-height: 24px;
+}
+
+.iconTxt {
+    position: relative;
+    padding-left: 25px;
+}
+
+.iconTxt i {
+    position: absolute;
+    left: 0;
+}
+
+.remindersPage .msgsColRight .tab-content,
+.remindersPage .msgsColRight .tab-pane {
+    height: 100%;
+}
+
+.remindersPage .msgsColRight .tab-pane .msgs {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.remindersPage .msgsColRight .tab-pane .msgFooter {
+    margin-top: auto;
+    text-align: right;
+}
+
+.remindersPage .msgList .nav-link {
+    border-radius: 0;
+}
+
+.remindersPage .msgList .nav-link {
+    border-radius: 0;
+    padding: 5px 40px !important;
+    margin-top: 12px;
+}
+
+.remindersPage .msgList .nav-link:before,
+.msgList .nav-link.active:before {
+    content: "\F332";
+}
+
+.createTriggerPage .cnMsgCard .inputRow label {
+    width: 140px;
+}
+
+/*=======// Start Modal Style //=======*/
+.modal {
+    width: calc(100% - 280px);
+    left: 280px;
+}
+
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 0;
+}
+
+.modal-backdrop {
+    width: calc(100% - 280px);
+    left: 280px;
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.modal-backdrop.show {
+    opacity: 1;
+}
+
+.confirmation-modal .modal-header {
+    display: block;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.confirmation-modal .modal-header h5 {
+    color: var(--black22);
+}
+
+.confirmation-modal .modal-header p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.confirmation-modal .itemList {
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+.confirmation-modal .itemList h6 {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--black22);
+    margin-bottom: 5px;
+}
+
+.confirmation-modal .itemList p {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--gray80);
+    line-height: 24px;
+    margin-bottom: 2px;
+}
+
+.confirmation-modal .itemList p:last-child {
+    margin-bottom: 0;
+}
+
+/*=======// End Modal Style //=======*/
+
+/*=======// Start React Alert Style //=======*/
+.react-confirm-alert-overlay {
+    width: calc(100% - 280px);
+    left: 280px;
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.react-confirm-alert-body {
+    width: 500px;
+    border-radius: 10px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+    border: 0 !important;
+    color: var(--black22);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.react-confirm-alert-body h1 {
+    line-height: 1.5;
+    font-size: 1.25rem;
+    color: var(--black22);
+    text-align: center;
+}
+
+.react-confirm-alert-button-group {
+    border-top: 2px solid rgba(0, 0, 0, .2);
+    padding-top: 20px;
+}
+
+.react-confirm-alert-button-group>button {
+    color: #fff;
+    border: 1px solid var(--orange);
+    background-color: var(--orange);
+    border-radius: 5px;
+    font-size: 16px;
+    max-width: 200px;
+}
+
+.react-confirm-alert-button-group>button:hover {
+    color: var(--orange);
+    background-color: transparent;
+}
+
+.react-confirm-alert-button-group>button[label="No"] {
+    border: 1px solid var(--redDC);
+    background-color: var(--redDC);
+}
+
+.react-confirm-alert-button-group>button[label="No"]:hover {
+    color: var(--redDC);
+    background-color: transparent;
+}
+
+/*=======// End React Alert Style //=======*/
+
+.searchBar input {
+    border-color: var(--gray80);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-right: 0;
+}
+
+.searchBar input:focus {
+    border-color: var(--black22);
+}
+
+.searchBar input:placeholder {
+    color: var(--black22);
+}
+
+.searchBar button {
+    border-color: var(--black22);
+    border-left: 0;
+    color: var(--black);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.medicationCostTable {
+    margin-top: 10px;
+    margin-bottom: 0;
+    border: 0;
+}
+
+.medicationCostTable>:not(caption)>*>* {
+    font-size: 15px;
+    border: 2px solid #eaeaea;
+}
+
+.medicationCostTable thead tr,
+.medicationCostTable thead tr th {
+    border: 0;
+}
+
+.medicationCostTable .bLR0 {
+    border-left: 0;
+    border-right: 0;
+}
+
+.medicationCostTable .bRo {
+    border-right: 0;
+}
+
+.medicationCostTable .bLo {
+    border-left: 0;
+}
+
+.medicationCostTable tbody tr th span {
+    font-weight: 400;
+}
+
+.pInfoPage .pInfoRow label {
+    width: 400px;
+}
+
+.medicalHistoryPage table tr td.dataTd {
+    width: 150px;
+}
+
+.no-data-text {
+    text-align: center;
+    padding: 50px 0 !important;
+    font-size: 18px !important;
+}
+
+.medicationReviewPage .events-timeline .info p {
+    margin-bottom: 10px;
+}
+
+.medicationReviewPage .events-timeline .info p.lead {
+    font-size: 18px;
+}
+
+.medicationReviewPage .pInfoRow {
+    margin-bottom: 35px;
+}

@@ -1,0 +1,129 @@
+:root {
+    --theme-color: #289EA8;
+    --orange: #fe8b4a;
+    --black22: #222222;
+    --placeholder: #909090;
+}
+
+.form-control::placeholder {
+    color: var(--placeholder);
+}
+
+.form-control:focus,
+.btn:hover,
+.btn:focus,
+.btn:active {
+    box-shadow: none;
+    outline: initial;
+}
+
+.btn-orange {
+    color: #fff;
+    border-color: var(--orange);
+    background-color: var(--orange);
+}
+
+.btn-orange:hover {
+    color: var(--orange);
+    background-color: transparent;
+}
+
+/*----------Start Login Pages----------*/
+.loginPage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./resources/login_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm {
+    position: relative;
+    width: 500px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.loginForm .logo {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.loginForm .logo img {
+    max-width: 150px;
+}
+
+.loginForm .frmTitle {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.loginForm .formGroup {
+    margin-bottom: 15px;
+}
+
+.loginForm .form-floating>label {
+    font-size: 18px;
+    color: var(--placeholder);
+    padding-left: 0;
+}
+
+.loginForm .form-floating>.form-control:focus~label,
+.loginForm .form-floating>.form-control:not(:placeholder-shown)~label,
+.loginForm .form-floating>.form-select~label {
+    font-weight: 700;
+    color: var(--theme-color);
+    opacity: .65;
+    transform: scale(.85) translateY(-1rem) translateX(0rem);
+}
+
+.loginForm .form-control {
+    color: #000;
+    font-size: 18px;
+    border: 0;
+    border-bottom: 1px solid var(--black22);
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.loginForm .form-floating>.form-control:focus,
+.loginForm .form-floating>.form-control:not(:placeholder-shown) {
+    border-bottom-color: var(--theme-color);
+}
+
+.loginForm .btnView {
+    margin: 30px 0;
+}
+
+.loginForm .btnView .btn {
+    width: 100%;
+}
+
+.loginForm .frgot-pass {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.loginForm .frgot-pass a {
+    font-size: 16px;
+    color: var(--black22);
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+input:-internal-autofill-selected {
+    background-color: transparent !important;
+}
+
+/*----------End Login Pages----------*/
